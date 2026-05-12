@@ -27,23 +27,38 @@ header {
     padding: 40px 0;
 }
 
-nav {
+.top-bar {
     display: flex;
-    gap: 30px;
-    background: white;
-    padding: 15px 25px;
-    border-radius: 16px;
-    width: max-content;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 60px;
-    margin-left: 0;
+    gap: 20px;
 }
 
+nav {
+    display: flex;
+    gap: 12px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 16px;
+}
+
+.language {
+    display: flex;
+    gap: 10px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 16px;
+}
+
+.language a,
 nav a {
     text-decoration: none;
     color: #555;
     font-size: 15px;
 }
 
+.language a:hover,
 nav a:hover {
     color: black;
 }
@@ -73,6 +88,7 @@ header img {
     width: 100%;
     border-radius: 20px;
     display: block;
+    margin-bottom: 35px;
 }
 
 main {
@@ -145,16 +161,20 @@ footer {
 
 @media (max-width: 900px) {
 
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
     header h1 {
         font-size: 50px;
     }
 
     article {
         width: 100%;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 20px;
     }
 }
